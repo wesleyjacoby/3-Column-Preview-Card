@@ -97,6 +97,7 @@ p {
     color: var(--trans-white);
     border: 2px solid var(--light-gray);
     border-radius: 3.125rem;
+    transition: all 150ms ease-in;
 }
 
 .learn-more-btn:hover {
