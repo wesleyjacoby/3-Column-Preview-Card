@@ -45,7 +45,6 @@ body {
         'suv'
         'luxury';
     border-radius: 0.5rem;
-    /*New code*/
     overflow: hidden;
     max-width: 23.75rem;
     min-width: 21.25rem;
