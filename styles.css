@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --darker-cyan: hsl(179, 100%, 13%);
+    --trans-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+/* -- GLOBAL STYLES -- */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: var(--light-gray);
+    line-height: 1.8;
+}
+
+/* -- MAIN CONTENT STYLES -- */
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'sedan'
+        'suv'
+        'luxury';
+    border-radius: 0.5rem;
+    /*New code*/
+    overflow: hidden;
+    max-width: 23.75rem;
+    min-width: 21.25rem;
+    margin: 1.25rem;
+}
+
+@media screen and (min-width: 880px) {
+    .grid-container {
+        grid-template-areas:
+            'sedan suv luxury';
+        max-width: 53.125rem;
+    }
+
+    p {
+        padding-bottom: 2.5rem;
+    }
+}
+
+.inner-container {
+    margin: 2.5rem;
+}
+
+.inner-container img {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--light-gray);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--trans-white);
+    margin-bottom: 2.625rem;
+}
+
+.button {
+    max-width: 100%;
+    margin-bottom: 3rem;
+}
+
+.learn-more-btn {
+    padding: 0.625rem 2rem;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--trans-white);
+    border: 3px solid var(--trans-white);
+    border-radius: 3.125rem;
+}
+
+.learn-more-btn:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--trans-white);
+    border: 3px solid var(--trans-white);
+}
+
+.sedan {
+    grid-area: sedan;
+    background-color: var(--bright-orange);
+}
+
+.sedan a {
+    color: var(--bright-orange);
+}
+
+.suv {
+    grid-area: suv;
+    background-color: var(--dark-cyan);
+}
+
+.suv a {
+    color: var(--dark-cyan);
+}
+
+.luxury {
+    grid-area: luxury;
+    background-color: var(--darker-cyan);
+}
+
+.luxury a {
+    color: var(--darker-cyan);
+}
